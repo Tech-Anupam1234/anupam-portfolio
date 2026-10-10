@@ -5,10 +5,57 @@ function Navbar() {
         <h1 className="text-2xl font-bold text-blue-600">Anupam</h1>
 
         <ul className="flex gap-6 font-medium">
-          <li className="hover:text-blue-600 cursor-pointer">About</li>
-          <li className="hover:text-blue-600 cursor-pointer">Skills</li>
-          <li className="hover:text-blue-600 cursor-pointer">Projects</li>
-          <li className="hover:text-blue-600 cursor-pointer">Contact</li>
+          <li>
+            <button
+              onClick={() =>
+                document.getElementById("about")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              className="hover:text-blue-600"
+            >
+              About
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() =>
+                document.getElementById("skills")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              className="hover:text-blue-600"
+            >
+              Skills
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() =>
+                document.getElementById("projects")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              className="hover:text-blue-600"
+            >
+              Projects
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              className="hover:text-blue-600"
+            >
+              Contact
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
