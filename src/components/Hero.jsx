@@ -5,6 +5,10 @@ function Hero() {
   return (
     <section className="min-h-screen bg-gradient-to-r form-blue-50 via-white to-slate-100 flex items-center justify-center">
       <div className="text-center">
+        <img
+  src="/profile.jpg"
+  alt="Anupam Yadav"
+  className="w-50 h-50 rounded-full object-cover mc-auto mb-6 border-4 border-blue-600 shadow-lg"/>
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,6 +19,8 @@ function Hero() {
         </motion.h1>
 
         <p className="text-3xl mt-4">Java Full Stack Developer</p>
+        <p>Passionate Java Full Stack Developer focused on
+Spring Boot, React, REST APIs and scalable web applications.</p>
 
         <p className="text-gray-600 mt-3">
           Spring Boot • React • MySQL • REST APIs

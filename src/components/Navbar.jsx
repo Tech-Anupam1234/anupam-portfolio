@@ -1,10 +1,13 @@
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-        <h1 className="text-2xl font-bold text-blue-600">Anupam</h1>
+        <h1 className="text-2xl font-bold text-blue-600">AY</h1>
 
-        <ul className="flex gap-6 font-medium">
+        <ul className="hidden md:flex gap-6 font-medium">
           <li>
             <button
               onClick={() =>
@@ -57,7 +60,23 @@ function Navbar() {
             </button>
           </li>
         </ul>
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+      {menuOpen && (
+  <div className="md:hidden bg-white shadow-md">
+    <ul className="flex flex-col items-center gap-4 py-4">
+      <li>About</li>
+      <li>Skills</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+)}
     </nav>
   );
 }
