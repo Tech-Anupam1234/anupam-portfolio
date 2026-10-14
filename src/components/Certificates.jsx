@@ -7,7 +7,7 @@ function Certificates() {
   ];
 
   return (
-    <section className="py-20 bg-slate-100">
+    <section className="py-20 bg-slate-100 ">
       <h2 className="text-4xl font-bold text-center mb-12">
         Certifications
       </h2>

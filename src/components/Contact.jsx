@@ -27,7 +27,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-slate-800 dark:text-white">
       <h2 className="text-4xl font-bold text-center mb-10">Contact Me</h2>
 
       <form ref={form} onSubmit={sendEmail} className="max-w-xl mx-auto px-4">

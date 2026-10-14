@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-function Navbar() {
+
+function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -68,15 +69,23 @@ function Navbar() {
         </button>
       </div>
       {menuOpen && (
-  <div className="md:hidden bg-white shadow-md">
-    <ul className="flex flex-col items-center gap-4 py-4">
-      <li>About</li>
-      <li>Skills</li>
-      <li>Projects</li>
-      <li>Contact</li>
-    </ul>
-  </div>
-)}
+        <div className="md:hidden bg-white shadow-md">
+          <ul className="flex flex-col items-center gap-4 py-4">
+            <li>About</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Contact</li>
+            <li>
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="bg-slate-800 text-white px-4 py-2 rounded-lg"
+              >
+                {darkMode ? "☀ Light" : "🌙 Dark"}
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
